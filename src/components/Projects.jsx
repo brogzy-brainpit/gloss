@@ -16,7 +16,7 @@ function Projects() {
         },
          {   title:'project 02',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat accusamus nisi officiis ab pariatur corporis esse aperiam debitis omnis!',
-            image:'/images/S/SBoot.jpg',
+            image:'/images/S/STire.jpg',
             service:"interior valet"
         },
          {   title:'project 03',
