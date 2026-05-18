@@ -26,7 +26,7 @@ function Services() {
                    
                    </h2>
                 </div>
-                <div className='col-span-4 lg:col-span-4  col-start-3 lg:col-start-9'>
+                <div className='col-span-4 lg:col-span-7  col-start-3 lg:col-start-'>
                                     <p className='text-heading3 leading-[1.2] font-custom text-brand-black mb-10'>
                       our services are designed to empower you with the knowledge, skills, and confidence needed to excel in your career. Whether you're an individual seeking personalized guidance.
                                        
