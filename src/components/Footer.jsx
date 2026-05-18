@@ -8,7 +8,7 @@ import { accentColor } from '../../data'
 
 function Footer() {
   return (
-    <div className='bg-brand-black h-svh'>
+    <div className='bg-[#101718] h-svh'>
       <Section padding={false} className={'h-full px-[.625rem] pt-20 pb-5 lg:pt-20 lg:pb-10 '}>
        <GridColumn className='bg-brand-secondary py-10 px-[.625rem] h-full rounded-3xl '>
         <div className="col-span-6">

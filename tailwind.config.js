@@ -41,9 +41,9 @@ module.exports = {
       },
       colors:{
         'brand-text':"#1c2218",
-        'brand-white':"#e7f9fd",
+        'brand-white':"#f6fcfd",
         'brand-accent':"#614d70", //accent for links, hover state 
-        'brand-black':"#243640",
+        'brand-black':"#314447",
         'brand-secondary':"#a3e3ed", 
         'brand-background':"#FACC15",
         

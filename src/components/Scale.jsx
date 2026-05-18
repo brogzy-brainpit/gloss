@@ -22,7 +22,7 @@ function Scale() {
               //  const arr= [15,14,13,12,11,109,8,7,6,5,4,3,2,1]    
   return (
     <div ref={scrollTracker} className='relative w-full h-[400vh]'>
-         <div className='sticky overflow-hidden top-0 w-full h-screen bg-black flex  items-center justify-center' >
+         <div className='sticky overflow-hidden top-0 w-full h-svh bg-[#101718] flex  items-center justify-center' >
                   <Section className={'absolute h-full top-0 inset-0'}>
                     <GridColumn className={'h-full'}>
                       <div className='col-start-1 col-span-4 lg:col-start-1 flex items-en lg:col-span-4'>

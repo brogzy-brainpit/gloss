@@ -1,6 +1,6 @@
 import Section from '@/layout/Section'
-import {useState} from 'react'
-import {motion, useTransform} from 'framer-motion'
+import {useEffect, useRef, useState} from 'react'
+import {motion, useInView, useTransform} from 'framer-motion'
 import Image from 'next/image'
 import GridColumn from '@/layout/GridColumn'
 import { ArrowBigRight } from 'lucide-react'
@@ -43,7 +43,7 @@ const newX= useTransform(x,x=>x+14)
 const newY= useTransform(y,x=>x+14)
 const [isMouseActiv,setIsMouseActiv]=useState(false)
   return (
-    <div className='hsvh w-full bg-[#000000]'>
+    <div className='hsvh w-full bg-[#101718]'>
         
         <Section>
             <GridColumn>
@@ -69,20 +69,46 @@ const [isMouseActiv,setIsMouseActiv]=useState(false)
         roundedfull h-[50px] bg-brand-black text-brand-secondary capitalize text-[1.2em] tracking-wide font-custom'>
 view project
        </motion.div>
+
      {projects.map((props,i)=>{
+        const ref = useRef(null)
+
+  // activates when element reaches center-ish of viewport
+  const isInView = useInView(ref, {
+    margin: '-45% 0px -45% 0px',
+  })
+
+  // mobile auto activation
+  useEffect(() => {
+    if (window.innerWidth < 1024) {
+      if (isInView) {
+        setSelectedProject(i)
+      }
+    }
+  }, [isInView, i, setSelectedProject])
+
         return (
             <div key={i}
-             onMouseOver={()=>{setSelectedProject(i)}}
-              onMouseLeave={()=>{setSelectedProject(null)}}
+              ref={ref}
+      onMouseOver={() => {
+        if (window.innerWidth >= 1024) {
+          setSelectedProject(i)
+        }
+      }}
+      onMouseLeave={() => {
+        if (window.innerWidth >= 1024) {
+          setSelectedProject(null)
+        }
+      }}
                className='relative w-full'>
          
             <div className='border-b w-full z-30 relative border-brand-secondary p-4' >
                <Section padding={false} className={'w-full relative'}>
-                <GridColumn gridLines>
-                    <div className="col-span-3 flex items-center">
+                <GridColumn>
+                    <div className="lg:col-span-4 col-span-2 flex items-center">
                 <motion.p animate={{x:selectedProject==i?'5px':'0px'}} className='text-heading3 leading-[1.3] font-custom text-brand-white'>{props.title}</motion.p>
                     </div>
-                      <div className="lg:col-start-5 lg:col-span-4  col-span-2 flex justify-center items-center">
+                      <div className="lg:col-start-5 lg:col-span-4 col-span-2 flex justify-center items-center">
                 <motion.img
                 initial={{clipPath:"inset(0 50% 0 50%)"}}
                 exit={{clipPath:"inset(0 50% 0 50%)"}}
@@ -91,7 +117,7 @@ view project
                 className=' aspect-[8/6] h-[8em] w-[14em] object-cover' src={props.image} width={300} height={300}/>
               
                     </div>
-                      <div className="col-span-2 lg:col-start-11 lg:col-span-2  relative flex justify-end items-center ">
+                      <div className="lg:col-span-4 col-span-2 lg:col-start-11  relative flex justify-end items-center ">
                 <motion.p animate={{x:selectedProject==i?'-5px':'0px'}} className='text-para leading-[.3] capitalize  font-body text-brand-white'>{props.service}</motion.p>
                
                     </div>
@@ -116,12 +142,12 @@ const Overlay= ({props,i,selectedProject})=>{
        
         className="absolute h-full w-full z-20 [transition:clip-path_.4s top-0 inset-0 bg-brand-secondary">
 
-         <Section padding={false} className={' h-full relative'}>
-            <GridColumn className={'h-full  relative'}>
-                 <div className="col-span-4 flex items-center">
+         <Section padding={false} className={' h-full w-full relative'}>
+            <GridColumn className={'h-full w-full relative'}>
+                 <div className="lg:col-span-4 col-span-2 flex items-center">
                 <p className='text-heading3 leading-[1.3] font-custom text-brand-black'>{props.title}</p>
                     </div>
-                      <div className="col-span-4 flex justify-center items-center">
+                      <div className="lg:col-span-4 col-span-2 flex justify-center items-center">
                 <motion.img
                 initial={{clipPath:"inset(0 50% 0 50%)"}}
                 exit={{clipPath:"inset(0 50% 0 50%)"}}
@@ -130,8 +156,8 @@ const Overlay= ({props,i,selectedProject})=>{
                 className='aspect-[8/6] h-[8em] w-[14em] object-cover' src={props.image} width={300} height={300}/>
               
                     </div>
-                 <div className="col-span-4 relative  col-start-9 flex justify-cente items-center ">
-                <p className='font-body text-para text-brand-black capitalize'> dolor sit amet consectetur adipisicing elit. Minima iusto ducimus expedita doloribus aliquid mollitia.</p>
+                 <div className="lg:col-start-9  lg:col-span-4 col-span-2 relative  flex justify-cente items-center ">
+                <p className='font-body text-para text-brand-black capitalize'> {'dolor sit amet consectetur adipisicing elit. Minima iusto ducimus expedita doloribus aliquid mollitia.'.substring(0,40)}</p>
                   
                     </div>
             </GridColumn>

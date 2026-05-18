@@ -98,7 +98,7 @@ const spreadCard={
 }),
 }
   return (
-    <div className=' h-sv bg-black overflow-hidden'>
+    <div className=' h-sv bg-[#101718] overflow-hidden'>
     <div ref={mergeRefs(trackScroll,scope)} className='flex h-[70svh]  justify-center relative items-center w-full'>
 
         {cards.map(({img},i)=>{
