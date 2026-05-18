@@ -28,8 +28,8 @@ function Services() {
                 </div>
                 <div className='col-span-4 lg:col-span-7  col-start-3 lg:col-start-'>
                                     <p className='text-heading3 leading-[1.2] font-custom text-brand-black mb-10'>
-                      our services are designed to empower you with the knowledge, skills, and confidence needed to excel in your career. Whether you're an individual seeking personalized guidance.
-                                       
+                                       We provide premium car detailing services, restoring your vehicle’s shine inside and out with expert care, deep cleaning, and precision finishing to keep your car looking brand new every time.
+
                                     </p>
                                   
                 </div>

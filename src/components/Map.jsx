@@ -2,31 +2,49 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Section from '@/layout/Section'
 import GridColumn from '@/layout/GridColumn'
-import { Mail } from 'lucide-react'
+import { LocationEdit, Mail, MapPin, Phone } from 'lucide-react'
 function Map() {
   return (
     <motion.div initial={{ opacity: 0, y: 40 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
-   className="w-full h-svh overflow-hidden rounded-2xl">
+   className="w-full h-svh overflow-hidden bg-brand-black ">
       <Section className='h-full w-full '>
         <GridColumn className='h-full w-full '>
             <div className='col-span-4'>
-                 <h2 className='font-custom text-brand-black text-heading2 mb-4'>
-                   <span className=' capitalize'>contact us</span>
+                 <h2 className='font-custom text-brand-white text-heading2 mb-4'>
+                   <span className=' capitalize '>contact us</span>
                    </h2>
-                   <p className='my-10 text-para leading-[1.2] font-body text-brand-black mb-10'>
+                   <p className='my-10 text-para leading-[1.2] font-body text-brand-white mb-10'>
                         We are here to assist you with any inquiries, feedback, or support you may need. Please feel free to reach out to us through any of the following channels:
                       </p>
 
-                      <div>
-                        <div className="flex items-center gap-3">
-                        <Mail size={18} className="opacity-60" />
-                        
-                        <p className="text-lg">
-                            hello@studio.com
+                      <div className='flex flex-col gap-3'>
+                         <div className="flex items-center gap-3">
+                        <div  className="flex flex-col p-2 shadow-sm rounded-full bg-brand-secondary">
+                        <Phone size={24} className="opac text-brand-black" />
+                        </div>
+                        <p className="text-para font-body text-brand-white">
+                            +17868547637
                         </p>
                         </div>
+                        <div className="flex items-center gap-3">
+                        <div  className="flex flex-col p-2 shadow-sm rounded-full bg-brand-secondary">
+                        <Mail size={24} className="opac text-brand-black" />
+                        </div>
+                        <p className="text-para font-body text-brand-white">
+                            hello@domain.com
+                        </p>
+                        </div>
+                        <div className="flex items-center gap-3">
+                        <div  className="flex flex-col p-2 shadow-sm rounded-full bg-brand-secondary">
+                        <MapPin size={24} className="opac text-brand-black" />
+                        </div>
+                        <p className="text-para font-body text-brand-white">
+                           123, Street, PA 456 State, Miami, FL
+                        </p>
+                        </div>
+                       
                       </div>
             </div>
             <div className='col-span-full lg:col-span-8'>

@@ -37,7 +37,7 @@ function PageContent() {
      <SlideIn/>
      <Services/>
      <Projects/>
-     <SpreadCards/>
+     {/* <SpreadCards/> */}
      {/* <HorizontalTextWavy/> */}
      {/* <FlipCardOnScroll/> */}
       {/* <Skiper49/> */}

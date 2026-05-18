@@ -43,7 +43,7 @@ module.exports = {
         'brand-text':"#1c2218",
         'brand-white':"#f6fcfd",
         'brand-accent':"#614d70", //accent for links, hover state 
-        'brand-black':"#314447",
+        'brand-black':"#101718",
         'brand-secondary':"#a3e3ed", 
         'brand-background':"#FACC15",
         
