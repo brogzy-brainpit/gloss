@@ -9,6 +9,8 @@ import SpreadCards from '@/components/SpreadCards';
 import Scale from '@/components/Scale';
 import Projects from '@/components/Projects';
 import HorizontalTextWavy from "@/components/HorizontalTextWavy";
+import Services from "@/components/Services";
+import Map from "@/components/Map";
 
 function PageContent() {
    const [isLoading,setIsLoading]=useState(true)
@@ -33,11 +35,13 @@ function PageContent() {
      <Section1  preLoaderOut={preLoaderOut}/>
      <Scale/>
      <SlideIn/>
+     <Services/>
      <Projects/>
      <SpreadCards/>
      {/* <HorizontalTextWavy/> */}
      {/* <FlipCardOnScroll/> */}
       {/* <Skiper49/> */}
+      <Map/>
     </SmoothScroll>
            
     

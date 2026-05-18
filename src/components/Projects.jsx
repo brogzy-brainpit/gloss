@@ -11,27 +11,27 @@ function Projects() {
     const projects=[
         {   title:'project 01',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat accusamus nisi officiis ab pariatur corporis esse aperiam debitis omnis!',
-            image:'/images/S/Valet.jpg',
+            image:'/images/S/SWagon.jpg',
             service:"full valet"
         },
          {   title:'project 02',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat accusamus nisi officiis ab pariatur corporis esse aperiam debitis omnis!',
-            image:'/images/S/STire.jpg',
+            image:'/images/S/SLaboWash.jpg',
             service:"interior valet"
         },
          {   title:'project 03',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat accusamus nisi officiis ab pariatur corporis esse aperiam debitis omnis!',
-            image:'/images/S/STire.jpg',
+            image:'/images/S/SPorsche.jpg',
             service:"exterior valet"
         },
          {   title:'project 04',
             description:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellat accusamus nisi officiis ab pariatur corporis esse aperiam debitis omnis!',
-            image:'/images/S/SLambo.jpg',
+            image:'/images/S/SBmw.jpg',
             service:"full valet"
         },
          {   title:'project 05',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi illo consectetur saepe temporibus aliquid!',
-            image:'/images/S/SUrus.jpg',
+            image:'/images/S/SLaboWash.jpg',
             service:"interior valet"
         },
             
