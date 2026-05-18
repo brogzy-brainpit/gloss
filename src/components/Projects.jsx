@@ -64,7 +64,7 @@ const [isMouseActiv,setIsMouseActiv]=useState(false)
         </Section>
         <div className='w-full h-full' onMouseEnter={()=>{setIsMouseActiv(true)}} onMouseLeave={()=>{setIsMouseActiv(false)}} >
  <motion.div initial={{scale:0}}  animate={{scale:isMouseActiv?1:0}} style={{x:newX,y:newY}}
-       className='fixed pointer-events-none cursor-none flex items-center
+       className='fixed hidden md:flex lg:flex pointer-events-none cursor-none items-center
         justify-center z-[999] top-0 left-0 w-[7em] 
         roundedfull h-[50px] bg-brand-black text-brand-secondary capitalize text-[1.2em] tracking-wide font-custom'>
 view project
@@ -105,8 +105,8 @@ view project
             <div className='border-b w-full z-30 relative border-brand-secondary p-4' >
                <Section padding={false} className={'w-full relative'}>
                 <GridColumn>
-                    <div className="lg:col-span-4 col-span-2 flex items-center">
-                <motion.p animate={{x:selectedProject==i?'5px':'0px'}} className='text-heading3 leading-[1.3] font-custom text-brand-white'>{props.title}</motion.p>
+                    <div className="lg:col-span-4  col-span-2 flex items-center">
+                <motion.p  className='text-heading3 leading-[1.3] font-custom text-brand-white'>{props.title}</motion.p>
                     </div>
                       <div className="lg:col-start-5 lg:col-span-4 col-span-2 flex justify-center items-center">
                 <motion.img
@@ -118,7 +118,7 @@ view project
               
                     </div>
                       <div className="lg:col-span-4 col-span-2 lg:col-start-11  relative flex justify-end items-center ">
-                <motion.p animate={{x:selectedProject==i?'-5px':'0px'}} className='text-para leading-[.3] capitalize  font-body text-brand-white'>{props.service}</motion.p>
+                <motion.p  className='text-para leading-[.3] capitalize  font-body text-brand-white'>{props.service}</motion.p>
                
                     </div>
                 </GridColumn>
