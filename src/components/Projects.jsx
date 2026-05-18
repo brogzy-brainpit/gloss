@@ -56,7 +56,7 @@ const [isMouseActiv,setIsMouseActiv]=useState(false)
                 </div>
 
                 <div className='col-span-4 lg:col-span-4  col-start-3 lg:col-start-9'>
-                    <p className='font-body text-para text-brand-white capitalize'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iusto ducimus expedita doloribus aliquid mollitia.</p>
+                    <p className='font-body my-10 lg:my-0 text-para text-brand-white capitalize'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iusto ducimus expedita doloribus aliquid mollitia.</p>
                   
                 </div>
 
