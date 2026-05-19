@@ -78,15 +78,33 @@ const [preLoaderOut2,setPreLoaderOut2]=useState(true)
  }
 
 const initialWidthRef=useRef(null)
+const preloadImages = async () => {
+  const promises = image.map((src) => {
+    return new Promise((resolve, reject) => {
+      const img = new window.Image();
 
- useEffect(()=>{
-if(dimension.width>0 && initialWidthRef.current===null){
-  initialWidthRef.current= dimension.width
-  runAnimation(initialWidthRef.current);
-}
+      img.src = src;
 
-},[dimension.width])
-   
+      img.onload = () => resolve(src);
+      img.onerror = reject;
+    });
+  });
+
+  await Promise.all(promises);
+};
+ useEffect(() => {
+  const init = async () => {
+    if (dimension.width > 0 && initialWidthRef.current === null) {
+      initialWidthRef.current = dimension.width;
+
+      await preloadImages();
+
+      runAnimation(initialWidthRef.current);
+    }
+  };
+
+  init();
+}, [dimension.width]);
   return (
     <div ref={scope} className={` ${preLoaderOut?'relative':'fixed top-0 left-0'}  bg-brand-white z-[998] bgblue-900 h-svh w-full flex justify-center items-center`}>
        <div ref={scope2} className=' z-preloadr overflow-hidden absolute left-[50%] -translate-x-1/2 top-[50%] w-full -translate-y-1/2 flex gap-3 items-center justify-center h-svh  b-pink-700'>
