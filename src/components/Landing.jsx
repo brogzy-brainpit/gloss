@@ -116,7 +116,7 @@ function Landing({ setPreLoaderOut, preLoaderOut }) {
         initialWidthRef.current = dimension.width
 
         // WAIT FOR ALL IMAGES
-        await preloadImages();
+        // await preloadImages();
 
         // THEN START
         runAnimation(initialWidthRef.current);
