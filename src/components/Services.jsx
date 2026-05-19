@@ -53,8 +53,8 @@ function Services() {
    <RubberSection defaultStart={["start 0.89", "0.7 start"]} defaultY={[initialY, y]} >
         <div className={`${index === 1 ? 'text-brand-black' : 'text-brand-white'} ${index === 1 ? 'bg-brand-secondary' : 'bg-brand-black'} cursor-pointer overflow-hidden flex justify-between  relative w-full py-10 px-2 h-[350px] lg:rounded-xl rounded-sm items-start gap-4 flex-col`}>
   {/* Background image */}
- <h2 className=" text-para capitalize  font-body z-10">{text}</h2>
- <p className=" text-para  z-10">{para}</p>
+ <h2 className=" text-heading3 capitalize  font-custom z-10">{text}</h2>
+ <p className=" text-para w-[90%]  z-10">{para}</p>
 
 </div>
    </RubberSection>
