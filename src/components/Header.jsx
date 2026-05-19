@@ -34,13 +34,13 @@ const header={
   };
  
   return (
-        <motion.div variants={header} className='mix-blend-scree  fixed top-0 left-0 z-header w-full  bgslate-600' initial={'initial'} exit={'exit'} animate={preLoaderOut?'enter':'intial'}>
+        <motion.div variants={header} className='  fixed top-0 left-0 z-header w-full  bgslate-600' initial={'initial'} exit={'exit'} animate={preLoaderOut?'enter':'intial'}>
       <Section padding={false} className={'h-full px-5 py-4 pb5 lg:py-2'}>
        <div className='flex  relative items-center justify-between ' >
- <h2 className='font-custom z-header text-brand-white text-[2em] '> 
+ {/* <h2 className='font-custom z-header text-brand-white text-[2em] '> 
   Gloss<sup className='font-body'>&copy;</sup>
-  {/* ByMemet<sup className='font-body'>&copy;</sup> */}
-  </h2>
+  </h2> */}
+  <Logo fill='#A3E3ED' className={'h-10 mix-blend-difference'}/>
 
  <Menu/>
        </div>

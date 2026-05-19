@@ -5,6 +5,7 @@ import { Facebook, Instagram } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import { accentColor } from '../../data'
+import Logo from './Logo'
 
 function Footer() {
   return (
@@ -12,10 +13,8 @@ function Footer() {
       <Section padding={false} className={'h-full px-[.625rem] pt-20 pb-5 lg:pt-20 lg:pb-10 '}>
        <GridColumn className='bg-brand-secondary py-10 px-[.625rem] h-full rounded-3xl '>
         <div className="col-span-6">
-          <h2 className='font-custom z-header text-brand-black text-[10em] '> 
-  Gloss<sup className='font-body'>&copy;</sup>
-  {/* ByMemet<sup className='font-body'>&copy;</sup> */}
-  </h2>
+         <Logo fill='#101718' className={'h0 w-full'}/>
+
         </div>
          <div className="col-span-3 flex gap-2 flex-col">
           <h2 className='font-body w-fit text-para uppercase text-brand-black font-bold mb-2 py-[5px]'> <Copy colorBlock={accentColor} text={'Company'} trigger={true}/></h2>
