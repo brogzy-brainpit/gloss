@@ -182,7 +182,7 @@ function Landing({ setPreLoaderOut, preLoaderOut }) {
               priority
               alt=""
               src={src}
-              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-75 ${
                 index === i ? 'opacity-100' : 'opacity-0'
               }`}
             />
