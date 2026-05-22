@@ -1,6 +1,6 @@
 const secondaryColor= '#a3e3ed'
-const accentColor= "#314447"
-const blackColor= "#314447"
+const accentColor= "#101718"
+const blackColor= "#101718"
 
 
 export {secondaryColor,accentColor,blackColor}

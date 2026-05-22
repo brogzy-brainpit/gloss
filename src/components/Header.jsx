@@ -129,7 +129,7 @@ setMenuFullyOpened(true)
         <div className='flex flex-col ga-2'>
        {links.map(({title,url},i)=>{
         return (
-        <Link href={url}>
+        <Link href={url} className='capitalize'>
       <Copy colorBlock={accentColor} intialDelay={i*.08} text={title} trigger={MenuFullyOpened}/>
         </Link>
       )

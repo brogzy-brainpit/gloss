@@ -42,7 +42,7 @@ function Scale() {
                        <motion.h2  style={{x:x2}} className='text-brand-white font-custom2 leading-[.9] text-heading2 capitalize'>oumar</motion.h2>
                    </div>
            <motion.div style={{scale}} className='overflow-hidden  bannerimg-container absolute top-0 w-full h-full'>
-                      <div className="img "><Image fill className='w-full object-cover h-screen object-[50%_14%]'  src='/images/S/handsome.png' /></div>
+                      <div className="img "><Image fill className='w-full object-cover h-screen object-[50%_14%]'  src='/images/S/wash.png' /></div>
               </motion.div>
 
         </div>
