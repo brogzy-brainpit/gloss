@@ -5,6 +5,8 @@ import Image from 'next/image'
 import GridColumn from '@/layout/GridColumn'
 import { ArrowBigRight } from 'lucide-react'
 import useMouse from '@/effects/hooks/useMouse'
+import Copy from '@/effects/Copy'
+import { secondaryColor } from '../../data'
 
 function Projects() {
   
@@ -56,7 +58,14 @@ const [isMouseActiv,setIsMouseActiv]=useState(false)
                 </div>
 
                 <div className='col-span-4 lg:col-span-4  col-start-3 lg:col-start-9'>
-                    <p className='font-body my-10 lg:my-0 text-para text-brand-white capitalize'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima iusto ducimus expedita doloribus aliquid mollitia.</p>
+                  <p className='font-body my-10 lg:my-0 text-para text-brand-white capitalize'>
+                  <Copy
+                  stagger={0.05}
+                  colorBlock={secondaryColor}
+                  trigger={true}
+                  text={'A collection of professional car detailing projects focused on deep cleaning, paint enhancement, interior restoration, and premium finishing for a clean, polished appearance.'}
+                  /> 
+                      </p>
                   
                 </div>
 

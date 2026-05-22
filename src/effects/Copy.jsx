@@ -111,8 +111,8 @@ export default function Copy({ text,from='left',justify='left',to='right', intia
   }, [inView, isReady,trigger,text]);
 
   return (
-    <div ref={mergeRefs(ref, scope)} className="papa">
+    <span ref={mergeRefs(ref, scope)} className="papa">
       {text}
-    </div>
+    </span>
   );
 }

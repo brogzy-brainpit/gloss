@@ -5,6 +5,8 @@ import StaggerText from '@/effects/StaggerText';
 import Section from '@/layout/Section';
 import GridColumn from '@/layout/GridColumn';
 import { useMediaQuery } from 'react-responsive';
+import Copy from '@/effects/Copy';
+import { secondaryColor } from '../../data';
 
 
 function Services() {
@@ -32,9 +34,14 @@ function Services() {
                    
                    </h2>
                 </div>
-                <div className='col-span-4 lg:col-span-7  col-start-3 lg:col-start-'>
-                                    <p className='text-heading3 leading-[1.2] font-custom text-brand-black mb-10'>
-                                       We provide premium car detailing services, restoring your vehicle’s shine inside and out with expert care, deep cleaning, and precision finishing to keep your car looking brand new every time.
+                <div className='col-span-4 lg:col-span-7  col-start-3'>
+                                    <p className='text-heading4 leading-[1.2] font-custom text-brand-black mb-10'>
+                                       <Copy
+                                                        stagger={0.05}
+                                                        colorBlock={'#101718'}
+                                                        trigger={true}
+                                                        text={'We provide premium car detailing services, restoring your vehicle’s shine inside and out with expert care, deep cleaning, and precision finishing to keep your car looking brand new every time.'}
+                                                      />
 
                                     </p>
                                   

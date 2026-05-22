@@ -1,3 +1,6 @@
+
+
+
 import GridColumn from '@/layout/GridColumn'
 import Section from '@/layout/Section'
 import React, { useEffect, useRef, useState } from 'react'
@@ -21,6 +24,7 @@ function Landing({ setPreLoaderOut, preLoaderOut }) {
   const [scope2, animate2] = useAnimate();
 
   const image = [
+    '/images/S/clean.jpg',
     '/images/S/handsome.png',
     '/images/S/SBoot.jpg',
     '/images/S/detailer.png',
@@ -153,7 +157,7 @@ function Landing({ setPreLoaderOut, preLoaderOut }) {
             delay={0.06}
             preLoaderOut={true}
             gap='20px'
-            text={'Gloss'}
+            text={'Shine'}
             initialDelay={.7}
           />
         </h2>
